@@ -75,6 +75,41 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             max-width: 100%;
             margin: auto;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            padding: 10px;
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #c82333;
         }
         table {
             width: 100%;
@@ -101,12 +136,48 @@
     <a href="<?= base_url('admin/dashboard') ?>">📊 Admin Dashboard</a>
     <a href="<?= base_url('admin/manage-users') ?>">👥 Manage Users</a>
     <a href="<?= base_url('admin/manage-courses') ?>">📚 Manage Courses</a>
-    <a href="#">⚙️ System Settings</a>
+
     <a href="<?= base_url('logout') ?>">🚪 Logout</a>
 </div>
 
 <div class="main-content">
     <h2>Manage Courses</h2>
+
+    <?php if (session()->getFlashdata('success')): ?>
+        <div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+            <?= esc(session()->getFlashdata('success')) ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <div style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+            <?= esc(session()->getFlashdata('error')) ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="card">
+        <h3>Create New Course</h3>
+        <form action="<?= base_url('admin/create-course') ?>" method="post">
+            <?= csrf_field() ?>
+            <label for="course_name">Course Name:</label>
+            <input type="text" id="course_name" name="course_name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="instructor_id">Instructor:</label>
+            <select id="instructor_id" name="instructor_id" required>
+                <option value="">Select Instructor</option>
+                <?php if (!empty($instructors)): ?>
+                    <?php foreach ($instructors as $instructor): ?>
+                        <option value="<?= esc($instructor['user_id']) ?>"><?= esc($instructor['name']) ?></option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
+
+            <button type="submit">Create Course</button>
+        </form>
+    </div>
 
     <div class="card">
         <table>
@@ -136,7 +207,8 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <a href="#">Edit</a> | <a href="#">Delete</a>
+                                <a href="<?= base_url('admin/edit-course/' . $course['course_id']) ?>">Edit</a> |
+                                <a href="<?= base_url('admin/delete-course/' . $course['course_id']) ?>" onclick="return confirm('Are you sure you want to delete this course?')">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

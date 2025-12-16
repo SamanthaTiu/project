@@ -7,10 +7,12 @@ use App\Controllers\BaseController;
 class Notifications extends BaseController
 {
     protected $session;
+    protected $db;
 
     public function __construct()
     {
         $this->session = session();
+        $this->db = \Config\Database::connect();
     }
 
     /**
@@ -75,6 +77,35 @@ class Notifications extends BaseController
             return $this->response
                         ->setStatusCode(404)
                         ->setJSON(['status' => 'error', 'message' => 'Notification not found or already read']);
+        }
+    }
+
+    /**
+     * Mark a notification as unread.
+     * Expects POST with id parameter.
+     */
+    public function mark_as_unread($id)
+    {
+        $userId = $this->session->get('user_id') ?? $this->session->get('id');
+
+        if (empty($userId)) {
+            return $this->response
+                        ->setStatusCode(401)
+                        ->setJSON(['status' => 'error', 'message' => 'User not logged in']);
+        }
+
+        // Update the notification to mark as unread
+        $updated = $this->db->table('notifications')
+            ->where('id', $id)
+            ->where('user_id', $userId) // Ensure user can only mark their own notifications
+            ->update(['is_read' => 0]);
+
+        if ($updated) {
+            return $this->response->setJSON(['status' => 'success']);
+        } else {
+            return $this->response
+                        ->setStatusCode(404)
+                        ->setJSON(['status' => 'error', 'message' => 'Notification not found or already unread']);
         }
     }
 }

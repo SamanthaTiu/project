@@ -1,0 +1,680 @@
+CRITICAL - 2025-12-14 07:54:35 --> Error: Call to undefined function form_open()
+[Method: GET, Route: instructor/course/10/create-announcement]
+in APPPATH\Views\instructor\course\create_announcement.php on line 93.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('instructor/course/create_announcement', [], true)
+ 4 APPPATH\Controllers\Instructor.php(222): view('instructor/course/create_announcement', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Instructor->createAnnouncement('10')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Instructor))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-12-14 07:58:23 --> mysqli_sql_exception: Table 'lms_ramas.assignments' doesn't exist in C:\xampp\htdocs\ITE311-RAMAS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-RAMAS\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ITE311-RAMAS\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ITE311-RAMAS\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ITE311-RAMAS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-RAMAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-RAMAS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ITE311-RAMAS\app\Controllers\Instructor.php(119): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ITE311-RAMAS\system\CodeIgniter.php(933): App\Controllers\Instructor->assignments('10')
+#8 C:\xampp\htdocs\ITE311-RAMAS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Instructor))
+#9 C:\xampp\htdocs\ITE311-RAMAS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ITE311-RAMAS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ITE311-RAMAS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ITE311-RAMAS\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-14 07:58:23 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: instructor/course/10/assignments]
+in SYSTEMPATH\Model.php on line 287.
+ 1 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Instructor.php(119): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Instructor->assignments('10')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Instructor))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:03:00 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:03:07 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:03:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:03:34 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:04:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:05:31 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:06:31 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:07:31 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:08:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:09:31 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:10:31 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:11:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:12:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:13:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:14:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:15:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:15:59 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:17:00 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:17:22 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:18:08 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:18:11 --> ErrorException: Undefined property: App\Controllers\Course::$db
+[Method: POST, Route: course/enroll]
+in APPPATH\Controllers\Course.php on line 68.
+ 1 APPPATH\Controllers\Course.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Course::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Course.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Course->enroll()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Course))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:18:17 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:18:23 --> ErrorException: Undefined property: App\Controllers\Course::$db
+[Method: POST, Route: course/enroll]
+in APPPATH\Controllers\Course.php on line 68.
+ 1 APPPATH\Controllers\Course.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Course::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Course.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Course->enroll()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Course))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:18:42 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:20:06 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:20:11 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:21:04 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:21:19 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:21:57 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:22:57 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:23:56 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:24:18 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:24:24 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:24:51 --> ErrorException: Undefined property: App\Controllers\Materials::$db
+[Method: POST, Route: instructor/course/upload]
+in APPPATH\Controllers\Materials.php on line 194.
+ 1 APPPATH\Controllers\Materials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Materials::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Materials.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Materials->upload()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Materials))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:25:12 --> ErrorException: Undefined property: App\Controllers\Materials::$db
+[Method: POST, Route: instructor/course/upload]
+in APPPATH\Controllers\Materials.php on line 194.
+ 1 APPPATH\Controllers\Materials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Materials::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Materials.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Materials->upload()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Materials))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:25:12 --> ErrorException: Undefined property: App\Controllers\Materials::$db
+[Method: POST, Route: instructor/course/upload]
+in APPPATH\Controllers\Materials.php on line 194.
+ 1 APPPATH\Controllers\Materials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Materials::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Materials.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Materials->upload()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Materials))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:25:34 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:26:35 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:27:35 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:28:04 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:28:09 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:28:12 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:28:36 --> ErrorException: Undefined property: App\Controllers\Materials::$db
+[Method: POST, Route: instructor/course/upload]
+in APPPATH\Controllers\Materials.php on line 194.
+ 1 APPPATH\Controllers\Materials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Materials::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Materials.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Materials->upload()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Materials))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:28:52 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:29:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:30:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:31:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:32:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:33:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:34:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:35:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:36:54 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:37:52 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:38:52 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:39:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:40:54 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:41:55 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:42:56 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:43:57 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:44:53 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:45:54 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:46:30 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:46:36 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-14 08:47:37 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

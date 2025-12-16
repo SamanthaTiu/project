@@ -90,7 +90,7 @@
     <a href="<?= base_url('admin/dashboard') ?>">📊 Admin Dashboard</a>
         <a href="<?= base_url('admin/manage-users') ?>">👥 Manage Users</a>
         <a href="<?= base_url('admin/manage-courses') ?>">📚 Manage Courses</a>
-        <a href="#">⚙️ System Settings</a>
+
     <a href="<?= base_url('logout') ?>">🚪 Logout</a>
 </div>
 

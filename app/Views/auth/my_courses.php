@@ -161,6 +161,7 @@
     <a href="<?= base_url('logout') ?>">🚪 Logout</a>
 </div>
 
+
 <!-- Main Content -->
 <div class="main-content">
     <h2>My Subjects</h2>

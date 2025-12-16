@@ -185,10 +185,32 @@
             border-bottom: 1px solid #e9ecef;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-between;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
+        }
+        .top-navbar .search-container {
+            flex: 1;
+            max-width: 400px;
+            margin-right: 20px;
+        }
+        .top-navbar .search-container input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .top-navbar .search-container input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+
+        /* Notification dropdown styling */
+        .dropdown-menu {
+            min-width: 400px;
         }
         .top-navbar .notification-icon {
             font-size: 24px;
@@ -205,6 +227,44 @@
             right: -10px;
             font-size: 10px;
             padding: 2px 5px;
+        }
+
+        /* Search dropdown styling */
+        .search-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .search-dropdown-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-dropdown-item:hover {
+            background: #f8f9fa;
+        }
+        .search-dropdown-item:last-child {
+            border-bottom: none;
+        }
+        .search-dropdown-item h5 {
+            margin: 0;
+            font-size: 16px;
+            color: #0d6efd;
+        }
+        .search-dropdown-item p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #6c757d;
         }
 
         /* Responsive */
@@ -253,7 +313,11 @@
 
 <!-- Top Navbar -->
 <div class="top-navbar">
-    <div class="dropdown">
+    <div class="search-container">
+        <input type="text" id="course-search" placeholder="Search courses..." />
+        <div id="search-dropdown" class="search-dropdown" style="display: none;"></div>
+    </div>
+    <div class="dropdown" data-bs-auto-close="outside">
         <div class="notification-icon" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             🔔
             <span id="notification-badge" class="badge bg-danger" style="display: none;">0</span>
@@ -277,6 +341,8 @@
         <p>You are logged in as <strong>student</strong>.</p>
         <p>Here you can view your lessons, submit assignments, and check grades.</p>
     </div>
+
+
 
     <!-- STEP 4: Display Enrolled Courses and Available Courses -->
     <div class="courses-grid">
@@ -526,10 +592,33 @@ $(document).ready(function() {
 
                 if (notifications.length > 0) {
                     notifications.forEach(function(notification) {
+                        // Determine the link based on notification message
+                        var linkUrl = '#';
+                        if (notification.message.includes('material uploaded')) {
+                            // Extract course name from message like "New material uploaded in Course Name: file.pdf"
+                            var courseMatch = notification.message.match(/New material uploaded in ([^:]+):/);
+                            if (courseMatch) {
+                                var courseName = courseMatch[1].trim();
+                                // For now, link to my-courses page - you might want to make this more specific
+                                linkUrl = '<?= site_url("my-courses") ?>';
+                            }
+                        } else if (notification.message.includes('announcement')) {
+                            linkUrl = '<?= site_url("announcements") ?>';
+                        } else if (notification.message.includes('assignment')) {
+                            linkUrl = '<?= site_url("my-courses") ?>';
+                        } else if (notification.message.includes('enrolled')) {
+                            linkUrl = '<?= site_url("my-courses") ?>';
+                        }
+
+                        var isRead = notification.is_read == 1;
+                        var alertClass = isRead ? 'alert-light' : 'alert-info';
+                        var buttonText = isRead ? 'Mark as Unread' : 'Mark as Read';
+                        var buttonClass = isRead ? 'btn-outline-secondary' : 'btn-outline-primary';
+
                         var notificationItem = `
-                            <li class="dropdown-item alert alert-info p-2 mb-1">
-                                <div>${notification.message}</div>
-                                <button class="btn btn-sm btn-outline-primary mt-1 mark-read-btn" data-id="${notification.id}">Mark as Read</button>
+                            <li class="alert ${alertClass} p-2 mb-1">
+                                <div style="cursor: pointer;" onclick="window.location.href='${linkUrl}'">${notification.message}</div>
+                                <button class="btn btn-sm ${buttonClass} mt-1 toggle-read-btn" data-id="${notification.id}" data-read="${notification.is_read}">${buttonText}</button>
                             </li>
                         `;
                         notificationList.append(notificationItem);
@@ -549,20 +638,161 @@ $(document).ready(function() {
         loadNotifications();
     }, 60000); // 60 seconds
 
-    // Handle mark as read
-    $(document).on('click', '.mark-read-btn', function(e) {
-        e.stopPropagation();
-        var notificationId = $(this).data('id');
-        var $item = $(this).closest('.dropdown-item');
+    // Function to toggle read/unread status
+    function toggleReadStatus(notificationId, buttonElement) {
+        var $item = $(buttonElement).closest('li');
+        var $button = $(buttonElement);
+        var currentReadStatus = parseInt($button.data('read'));
+        var isCurrentlyRead = currentReadStatus === 1;
 
-        $.post('<?= site_url("notifications/mark_as_read/") ?>' + notificationId, function(response) {
+        // Disable button and show loading state
+        $button.prop('disabled', true).text('Updating...');
+
+        // Determine which endpoint to call
+        var endpoint = isCurrentlyRead ? '<?= site_url("notifications/mark_as_unread/") ?>' + notificationId : '<?= site_url("notifications/mark_as_read/") ?>' + notificationId;
+
+        $.post(endpoint, function(response) {
             if (response.status === 'success') {
-                $item.remove();
-                loadNotifications(); // Refresh the list and badge
+                // Toggle the read status
+                var newReadStatus = isCurrentlyRead ? 0 : 1;
+                $button.data('read', newReadStatus);
+
+                if (newReadStatus === 1) {
+                    // Mark as read - change to white/light background
+                    $item.removeClass('alert-info').addClass('alert-light');
+                    $button.removeClass('btn-outline-primary').addClass('btn-outline-secondary').text('Mark as Unread');
+                } else {
+                    // Mark as unread - change back to blue background
+                    $item.removeClass('alert-light').addClass('alert-info');
+                    $button.removeClass('btn-outline-secondary').addClass('btn-outline-primary').text('Mark as Read');
+                }
+
+                // Re-enable button
+                $button.prop('disabled', false);
+
+                // Update badge count only (don't refresh entire list)
+                updateNotificationBadge();
             } else {
-                showAlert('danger', 'Failed to mark notification as read');
+                showAlert('danger', 'Failed to update notification status');
+                // Re-enable button on error
+                $button.prop('disabled', false).text(isCurrentlyRead ? 'Mark as Unread' : 'Mark as Read');
             }
         }, 'json');
+    }
+
+    // Function to update only the notification badge count
+    function updateNotificationBadge() {
+        $.get('<?= site_url("notifications") ?>', function(response) {
+            if (response.status === 'success') {
+                var unreadCount = response.unread_count;
+                // Update badge
+                if (unreadCount > 0) {
+                    $('#notification-badge').text(unreadCount).show();
+                } else {
+                    $('#notification-badge').hide();
+                }
+            }
+        }, 'json');
+    }
+
+    // Handle toggle read status
+    $(document).on('click', '.toggle-read-btn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var notificationId = $(this).data('id');
+        toggleReadStatus(notificationId, this);
+    });
+
+    // Course search functionality with dropdown
+    var allCourses = [];
+
+    // Collect all courses on page load
+    function collectCourses() {
+        allCourses = [];
+        $('.course-card').each(function() {
+            var $card = $(this);
+            var courseId = $card.data('course-id') || $card.attr('id').replace('course-', '');
+            var title = $card.find('h4').text().trim();
+            var description = $card.find('p').text().trim() || '';
+            allCourses.push({
+                id: courseId,
+                title: title,
+                description: description,
+                element: $card
+            });
+        });
+    }
+
+    // Initialize courses collection
+    collectCourses();
+
+    // Search input handler
+    $('#course-search').on('input', function() {
+        var query = $(this).val().toLowerCase().trim();
+        var $dropdown = $('#search-dropdown');
+
+        if (query.length === 0) {
+            $dropdown.hide();
+            $('.course-card').show();
+            return;
+        }
+
+        // Filter courses
+        var matchingCourses = allCourses.filter(function(course) {
+            return course.title.toLowerCase().includes(query) ||
+                   course.description.toLowerCase().includes(query);
+        });
+
+        // Show all courses first, then hide non-matching ones
+        $('.course-card').show();
+        if (matchingCourses.length > 0) {
+            $('.course-card').each(function() {
+                var courseId = $(this).data('course-id') || $(this).attr('id').replace('course-', '');
+                var isMatch = matchingCourses.some(function(course) {
+                    return course.id == courseId;
+                });
+                if (!isMatch) {
+                    $(this).hide();
+                }
+            });
+        } else {
+            $('.course-card').hide();
+        }
+
+        // Update dropdown
+        $dropdown.empty();
+        if (matchingCourses.length > 0 && matchingCourses.length <= 10) { // Show dropdown only if 10 or fewer matches
+            matchingCourses.forEach(function(course) {
+                var itemHTML = `
+                    <div class="search-dropdown-item" data-course-id="${course.id}">
+                        <h5>${course.title}</h5>
+                        ${course.description ? '<p>' + course.description + '</p>' : ''}
+                    </div>
+                `;
+                $dropdown.append(itemHTML);
+            });
+            $dropdown.show();
+        } else {
+            $dropdown.hide();
+        }
+    });
+
+    // Handle dropdown item click
+    $(document).on('click', '.search-dropdown-item', function() {
+        var courseId = $(this).data('course-id');
+
+        // Redirect to course materials page
+        window.location.href = '<?= site_url("course/") ?>' + courseId + '/materials';
+
+        // Hide dropdown
+        $('#search-dropdown').hide();
+    });
+
+    // Hide dropdown when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.search-container').length) {
+            $('#search-dropdown').hide();
+        }
     });
 });
 </script>

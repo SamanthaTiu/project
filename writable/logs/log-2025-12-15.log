@@ -1,0 +1,61 @@
+CRITICAL - 2025-12-15 08:44:57 --> ErrorException: Undefined property: App\Controllers\Course::$db
+[Method: POST, Route: course/enroll]
+in APPPATH\Controllers\Course.php on line 68.
+ 1 APPPATH\Controllers\Course.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Course::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Course.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Course->enroll()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Course))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 15:45:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "courses/search_results.php"
+[Method: GET, Route: courses/search]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('courses/search_results.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('courses/search_results', [], true)
+ 3 APPPATH\Controllers\Course.php(130): view('courses/search_results', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Course->search()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Course))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 16:24:34 --> Error: Call to undefined function set_value()
+[Method: GET, Route: admin/create-user]
+in APPPATH\Views\admin\create_user.php on line 47.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/create_user', [], true)
+ 4 APPPATH\Controllers\Admin.php(337): view('admin/create_user')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->createUser()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 16:24:41 --> Error: Call to undefined function set_value()
+[Method: GET, Route: admin/create-user]
+in APPPATH\Views\admin\create_user.php on line 47.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/create_user', [], true)
+ 4 APPPATH\Controllers\Admin.php(337): view('admin/create_user')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->createUser()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 16:34:07 --> Error: Call to undefined function set_value()
+[Method: GET, Route: admin/create-user]
+in APPPATH\Views\admin\create_user.php on line 47.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/create_user', [], true)
+ 4 APPPATH\Controllers\Admin.php(338): view('admin/create_user')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->createUser()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

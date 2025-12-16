@@ -13,6 +13,7 @@ class Materials extends BaseController
     protected $courseModel;
     protected $enrollmentModel;
     protected $session;
+    protected $db;
 
     public function __construct()
     {
@@ -20,6 +21,7 @@ class Materials extends BaseController
         $this->materialModel = new MaterialModel();
         $this->courseModel = new CourseModel();
         $this->enrollmentModel = new EnrollmentModel();
+        $this->db = \Config\Database::connect();
     }
 
     /**
@@ -174,6 +176,26 @@ class Materials extends BaseController
                 ];
 
                 if ($this->materialModel->insertMaterial($data)) {
+                    // Get all enrolled students for this course
+                    $enrolledStudents = $this->enrollmentModel->select('user_id')
+                        ->where('course_id', $courseId)
+                        ->findAll();
+
+                    // Create notifications for all enrolled students
+                    $notifications = [];
+                    foreach ($enrolledStudents as $student) {
+                        $notifications[] = [
+                            'user_id' => $student['user_id'],
+                            'message' => 'New material uploaded in ' . $course['course_name'] . ': ' . $data['file_name'],
+                            'is_read' => 0,
+                            'created_at' => date('Y-m-d H:i:s'),
+                        ];
+                    }
+
+                    if (!empty($notifications)) {
+                        $this->db->table('notifications')->insertBatch($notifications);
+                    }
+
                     return redirect()->back()->with('success', 'Material uploaded successfully');
                 } else {
                     // Delete file if database insert failed

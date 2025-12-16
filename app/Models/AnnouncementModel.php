@@ -13,7 +13,7 @@ class AnnouncementModel extends Model
     protected $protectFields    = true;
 
     // ✅ Add allowed fields (important for insert/update)
-    protected $allowedFields    = ['title', 'content', 'created_at'];
+    protected $allowedFields    = ['course_id', 'title', 'content', 'created_by', 'created_at'];
 
     // ✅ Automatically handle created_at and updated_at
     protected $useTimestamps = false;

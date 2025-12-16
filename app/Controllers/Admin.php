@@ -100,8 +100,12 @@ class Admin extends BaseController
             $course['enrolled_students'] = array_column($enrollments, 'student_name');
         }
 
+        // Fetch instructors for the create course form
+        $instructors = $this->userModel->where('role', 'instructor')->findAll();
+
         $data = [
-            'courses' => $courses
+            'courses' => $courses,
+            'instructors' => $instructors
         ];
 
         return view('admin/manage_courses', $data);
@@ -202,5 +206,140 @@ class Admin extends BaseController
         $this->userModel->delete($userId);
 
         return redirect()->to(site_url('admin/dashboard'))->with('success', 'User deleted successfully');
+    }
+
+    public function editCourse($courseId)
+    {
+        $session = session();
+
+        // Check if user is logged in and is an admin
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'admin') {
+            return redirect()->to(site_url('login'));
+        }
+
+        // Fetch course data
+        $course = $this->courseModel->find($courseId);
+        if (!$course) {
+            return redirect()->to(site_url('admin/manage-courses'))->with('error', 'Course not found');
+        }
+
+        // Fetch instructors
+        $instructors = $this->userModel->where('role', 'instructor')->findAll();
+
+        $data = [
+            'course' => $course,
+            'instructors' => $instructors
+        ];
+
+        return view('admin/edit_course', $data);
+    }
+
+    public function updateCourse()
+    {
+        $session = session();
+
+        // Check if user is logged in and is an admin
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'admin') {
+            return redirect()->to(site_url('login'));
+        }
+
+        $courseId = $this->request->getPost('course_id');
+        $courseName = $this->request->getPost('course_name');
+        $description = $this->request->getPost('description');
+        $instructorId = $this->request->getPost('instructor_id');
+
+        // Validate input
+        if (empty($courseName) || empty($description) || empty($instructorId)) {
+            return redirect()->to(site_url('admin/edit-course/' . $courseId))->with('error', 'All fields are required.');
+        }
+
+        // Check if instructor exists and is an instructor
+        $instructor = $this->userModel->find($instructorId);
+        if (!$instructor || $instructor['role'] !== 'instructor') {
+            return redirect()->to(site_url('admin/edit-course/' . $courseId))->with('error', 'Invalid instructor selected.');
+        }
+
+        // Check if instructor already has a course (but not this one)
+        $existingCourse = $this->courseModel->where('instructor_id', $instructorId)->where('course_id !=', $courseId)->first();
+        if ($existingCourse) {
+            return redirect()->to(site_url('admin/edit-course/' . $courseId))->with('error', 'Cant update course. The instructor already has a course.');
+        }
+
+        // Update course
+        $this->courseModel->update($courseId, [
+            'course_name' => $courseName,
+            'description' => $description,
+            'instructor_id' => $instructorId
+        ]);
+
+        return redirect()->to(site_url('admin/manage-courses'))->with('success', 'Course updated successfully.');
+    }
+
+    public function deleteCourse($courseId)
+    {
+        $session = session();
+
+        // Check if user is logged in and is an admin
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'admin') {
+            return redirect()->to(site_url('login'));
+        }
+
+        // Delete enrollments first to avoid foreign key constraint
+        $this->enrollmentModel->where('course_id', $courseId)->delete();
+
+        // Delete course
+        $this->courseModel->delete($courseId);
+
+        return redirect()->to(site_url('admin/manage-courses'))->with('success', 'Course deleted successfully.');
+    }
+
+    public function createUser()
+    {
+        helper(['form']);
+        $session = session();
+
+        // Check if user is logged in and is an admin
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'admin') {
+            return redirect()->to(site_url('login'));
+        }
+
+        if ($this->request->getMethod() === 'post') {
+            $rules = [
+                'name' => 'required|min_length[3]|max_length[50]',
+                'email' => 'required|valid_email',
+                'password' => 'required|min_length[6]',
+                'role' => 'required|in_list[student,instructor]'
+            ];
+
+            if (!$this->validate($rules)) {
+                return redirect()->back()->withInput()->with('validation', $this->validator);
+            }
+
+            // Check if email already exists
+            $existingUser = $this->userModel->where('email', $this->request->getPost('email'))->first();
+            if ($existingUser) {
+                return redirect()->back()->withInput()->with('error', 'Email already exists.');
+            }
+
+            $data = [
+                'name' => $this->request->getPost('name'),
+                'email' => $this->request->getPost('email'),
+                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+                'role' => $this->request->getPost('role'),
+            ];
+
+            log_message('info', 'Attempting to insert user: ' . json_encode($data));
+            if ($this->userModel->insert($data)) {
+                log_message('info', 'User created successfully with ID: ' . $this->userModel->getInsertID());
+                return redirect()->to(site_url('admin/dashboard'))->with('success', 'User created successfully.');
+            } else {
+                $dbError = $this->userModel->db->error();
+                log_message('error', 'Failed to create user. DB Error: ' . json_encode($dbError));
+                $errorMessage = isset($dbError['message']) ? $dbError['message'] : 'Unknown database error';
+                return redirect()->back()->withInput()->with('error', 'Failed to create user: ' . $errorMessage);
+            }
+        }
+
+        return view('admin/create_user');
     }
 }

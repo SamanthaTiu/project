@@ -101,7 +101,7 @@
     <a href="<?= base_url('admin/dashboard') ?>">📊 Admin Dashboard</a>
     <a href="<?= base_url('admin/manage-users') ?>">👥 Manage Users</a>
     <a href="<?= base_url('admin/manage-courses') ?>">📚 Manage Courses</a>
-    <a href="#">⚙️ System Settings</a>
+
     <a href="<?= base_url('logout') ?>">🚪 Logout</a>
 </div>
 
@@ -128,7 +128,10 @@
     </div>
 
     <div class="card">
-        
+        <div style="margin-bottom: 20px;">
+            <a href="<?= base_url('admin/create-user') ?>" class="btn btn-primary">Create New User</a>
+        </div>
+
         <table>
             <thead>
                 <tr>

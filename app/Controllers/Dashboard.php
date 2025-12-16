@@ -9,10 +9,14 @@ use App\Models\CourseModel;
 class Dashboard extends BaseController
 {
     protected $session;
+    protected $courseModel;
+    protected $db;
 
     public function __construct()
     {
         $this->session = session();
+        $this->courseModel = new CourseModel();
+        $this->db = db_connect();
     }
 
     public function index()
@@ -119,5 +123,37 @@ class Dashboard extends BaseController
         }
 
         return view('auth/my_grades', $data);
+    }
+
+    public function student()
+    {
+        $userId = $this->session->get('user_id') ?? $this->session->get('id');
+
+        // Load courses (adjust query if you want only relevant ones)
+        $courses = $this->courseModel->orderBy('course_name', 'ASC')->findAll();
+
+        // Get unread notifications count and recent notifications (for initial dropdown)
+        $unreadCount = 0;
+        $recentNotifications = [];
+
+        if (! empty($userId)) {
+            $notifQ = $this->db->table('notifications')->where('user_id', (int) $userId);
+            $unreadCount = $notifQ->where('is_read', 0)->countAllResults(false);
+
+            // Get recent 5 notifications
+            $recentNotifications = $this->db->table('notifications')
+                ->where('user_id', (int) $userId)
+                ->orderBy('created_at', 'DESC')
+                ->limit(5)
+                ->get()
+                ->getResultArray();
+        }
+
+        return view('dashboard/student', [
+            'courses' => $courses,
+            'searchTerm' => $this->request->getGet('search_term') ?? '',
+            'unreadCount' => $unreadCount,
+            'notifications' => $recentNotifications,
+        ]);
     }
 }

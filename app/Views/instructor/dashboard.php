@@ -126,7 +126,6 @@
     <a href="<?= base_url('instructor/course/courses') ?>">📚 My Courses</a>
     <a href="<?= base_url('instructor/my_students') ?>">🧑 My Students</a>
     <a href="#">📅 Class Schedule</a>
-    <a href="#" style="position: relative;">🔔 Notifications <?php if (isset($unreadNotifications) && $unreadNotifications > 0): ?><span style="background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; position: absolute; top: -5px; right: -5px;"><?php echo $unreadNotifications; ?></span><?php endif; ?></a>
     <a href="<?= base_url('logout') ?>">🚪 Logout</a>
 </div>
 

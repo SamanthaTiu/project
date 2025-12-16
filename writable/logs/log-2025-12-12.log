@@ -1,0 +1,352 @@
+CRITICAL - 2025-12-12 14:43:10 --> ErrorException: Undefined variable $course
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 5.
+ 1 APPPATH\Views\admin\manage_courses.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 14:43:13 --> ErrorException: Undefined variable $course
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 5.
+ 1 APPPATH\Views\admin\manage_courses.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 14:43:16 --> ErrorException: Undefined variable $course
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 5.
+ 1 APPPATH\Views\admin\manage_courses.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 14:43:19 --> ErrorException: Undefined variable $course
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 5.
+ 1 APPPATH\Views\admin\manage_courses.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:34:36 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:34:39 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:34:50 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:35:34 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:36:24 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:36:27 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:36:28 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:36:30 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:39:31 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/manage-courses]
+in APPPATH\Views\admin\manage_courses.php on line 210.
+ 1 APPPATH\Views\admin\manage_courses.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php', 210)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Views\\admin\\manage_courses.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/manage_courses', [], true)
+ 5 APPPATH\Controllers\Admin.php(111): view('admin/manage_courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->manageCourses()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:53:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:54:14 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:55:14 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:56:14 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:57:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:58:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 17:59:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:00:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:01:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:02:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:03:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:04:13 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:05:14 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:06:15 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:07:16 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:07:57 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-12 18:07:59 --> ErrorException: Undefined property: App\Controllers\Notifications::$db
+[Method: GET, Route: notifications]
+in APPPATH\Controllers\Notifications.php on line 31.
+ 1 APPPATH\Controllers\Notifications.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Notifications::$db', 'C:\\xampp\\htdocs\\ITE311-RAMAS\\app\\Controllers\\Notifications.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Notifications->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notifications))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

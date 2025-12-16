@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1765563880;_ci_previous_url|s:59:"http://localhost/ITE311-RAMAS/index.php/admin/edit-course/8";user_id|s:1:"9";name|s:10:"Admin User";email|s:17:"admin@example.com";role|s:5:"admin";isLoggedIn|b:1;error|s:56:"Cant update course. The instructor already has a course.";__ci_vars|a:1:{s:5:"error";s:3:"old";}
